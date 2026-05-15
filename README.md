@@ -38,3 +38,22 @@ flutter run
 - `GET /messages` — чтение истории сообщений.
 - `POST /messages` — отправка текста/медиа/файлов.
 - `POST /admin/users` — создание пользователей (только admin).
+
+---
+
+## Новый проект: Local AI Analyst (RAG на Streamlit + Ollama)
+
+Добавлен отдельный проект в папке `ai_analyst/`:
+- `app.py` — веб-интерфейс аналитика с загрузкой PDF/DOCX и чатом по документам.
+- `requirements.txt` — зависимости Python.
+- `DEPLOYMENT.md` — детальная пошаговая инструкция по развертыванию и запуску.
+
+Быстрый старт:
+```bash
+cd ai_analyst
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+ollama pull llama3
+streamlit run app.py
+```
